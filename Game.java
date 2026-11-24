@@ -10,16 +10,25 @@ public class Game
     // instance variables - repla ce the example below with your own
     private int x;
     private Genre genre;
-    private Platform platform;
+    private platform platform;
     private AgeRating ageRating;
+    private int totalScore;
+    private int numRatings;
+    
 
     /**
      * Constructor for objects of class Game
      */
-    public Game()
+    public Game(String title, Genre genre, Platform platform)
     {
         // initialise instance variables
-        x = 0;
+        This.title = title;
+        This.genre = genre;
+        This.platform = platform;
+        This.ageRating = ageRating;
+        totalScore = 0;
+        numRating = 0;
+        
     }
 
     /**
@@ -28,10 +37,15 @@ public class Game
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public String getTitle()
     {
         // put your code here
-        return x + y;
+        return title;
     }
-    
+    public Genre getGenre(){
+        return genre;
+    }
+    public String getDetails(){
+        return title + "|" + genre + "|" + platform +"|" + ageRating + " | Rating" + getRating();
+    }
 }
