@@ -7,27 +7,13 @@
  */
 public class singleplayergame extends Game
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class singleplayergame
-     */
-    public singleplayergame()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+   private boolean hasCampaign;
+   
+   public SinglePlayerGame(String title, Genre genre,Platform platform, AgeRating agerating, boolean hasCampaign) {
+       super(title,genre,platform,ageRating);
+       this.hasCampaign = hasCampaign;
+   }
+   public String getDetails() {
+       return super.getDetails() + " | Campaign: " + hasCampaign;
+   }
 }

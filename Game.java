@@ -8,7 +8,7 @@
 public class Game
 {
     // instance variables - repla ce the example below with your own
-    private int x;
+    private String title;
     private Genre genre;
     private platform platform;
     private AgeRating ageRating;
@@ -19,15 +19,15 @@ public class Game
     /**
      * Constructor for objects of class Game
      */
-    public Game(String title, Genre genre, Platform platform)
+    public Game(String title, Genre genre, platform platform, AgeRating ageRating)
     {
         // initialise instance variables
-        This.title = title;
-        This.genre = genre;
-        This.platform = platform;
-        This.ageRating = ageRating;
+        this.title = title;
+        this.genre = genre;
+        this.platform = platform;
+        this.ageRating = ageRating;
         totalScore = 0;
-        numRating = 0;
+        numRatings = 0;
         
     }
 
@@ -47,5 +47,11 @@ public class Game
     }
     public String getDetails(){
         return title + "|" + genre + "|" + platform +"|" + ageRating + " | Rating" + getRating();
+    }
+    public double getRating(){
+        if(numRatings == 0) {
+            return 0.0;
+        }
+        return (double) totalScore / numRatings;
     }
 }
