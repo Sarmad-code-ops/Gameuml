@@ -7,8 +7,11 @@
  */
 public class Game
 {
-    // instance variables - replace the example below with your own
+    // instance variables - repla ce the example below with your own
     private int x;
+    private Genre genre;
+    private Platform platform;
+    private AgeRating ageRating;
 
     /**
      * Constructor for objects of class Game
@@ -30,4 +33,5 @@ public class Game
         // put your code here
         return x + y;
     }
+    
 }

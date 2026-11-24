@@ -1,19 +1,19 @@
 
 /**
- * Write a description of class Platform here.
+ * Write a description of class singleplayergame here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Platform
+public class singleplayergame extends Game
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class Platform
+     * Constructor for objects of class singleplayergame
      */
-    public Platform()
+    public singleplayergame()
     {
         // initialise instance variables
         x = 0;
